@@ -3,18 +3,24 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  var primero = array[0]
+  return primero;
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  var ultimo = array[array.length - 1]
+  return ultimo;
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  var longitud = 0;
+  return longitud = (array.length);
 }
 
 
@@ -23,6 +29,13 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var nuevoArray = [];
+  for(i=0; i <= array.length -1; i++){
+    var incremento = array[i] +1;
+    nuevoArray.push(incremento);
+  }
+  return nuevoArray;
+
 }
 
 
@@ -30,6 +43,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
@@ -38,6 +53,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -47,6 +64,13 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  var nuevaCadena = [];
+  for(i=0; i <= palabras.length -1; i++){
+    var frase = palabras[i];
+    nuevaCadena.push(frase);
+    var nuevaFrase = nuevaCadena.join(' ');
+    } 
+  return nuevaFrase;
 }
 
 
@@ -54,6 +78,16 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  var elementoArray = null;
+  for(i=0; i<=array.length; i++){
+    elementoArray = array[i];
+
+      if(elementoArray===elemento)
+      {
+        return true;
+      }
+    return false;
+  }
 }
 
 
@@ -61,6 +95,8 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var total = numeros.reduce(function(a, b){ return a + b; });
+  return total;
 }
 
 
@@ -68,6 +104,9 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var total = resultadosTest.reduce(function(a, b){ return a + b; });
+  var promedio = total / resultadosTest.length;
+  return promedio;
 }
 
 
@@ -75,6 +114,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  
 }
 
 
@@ -89,6 +129,16 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+  var cont = 0;
+
+  for (i=0; i <= arreglo.length-1; i++){
+    var elemento = arreglo[i];
+    if(elemento > 18){
+      cont++;
+    }
+  }
+  return cont;
+  
 }
 
 
@@ -98,6 +148,32 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
   
+  switch (numeroDeDia) {
+    case 1:
+      return 'Es fin de semana';
+      break;
+    case 2:
+      return 'Es dia Laboral';
+      break;
+    case 3:
+      return 'Es dia Laboral';
+      break;
+    case 4:
+      return 'Es dia Laboral';
+      break;
+    case 5:
+      return 'Es dia Laboral';
+      break;
+    case 6:
+      return 'Es dia Laboral';
+      break;
+    case 7:
+      return 'Es fin de semana';
+      break;
+    default:
+      return 'Dia not found';
+  }
+
 } 
 
 
@@ -105,7 +181,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var numero = n ;
+  if(numero(0) === 9 ){
+    return true;
+  }
+  return false;
 }
 
 
