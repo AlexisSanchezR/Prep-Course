@@ -110,7 +110,8 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
-  
+  usuario.amigos.push(nuevoAmigo);
+  return usuario;
 }
 
 function pasarUsuarioAPremium (usuarios) {
@@ -133,10 +134,7 @@ function sumarLikesDeUsuario (usuario) {
   // Devuelve la suma
   // Tu código:
 
-  var suma = 0;
-  for(var i = 0; i < usuario.length; i++){
-    suma += usuario.posts[i].likes;
-  }return suma;
+
 }
 
 function agregarMetodoCalculoDescuento (producto) {
